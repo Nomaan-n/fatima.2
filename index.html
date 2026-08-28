@@ -17,14 +17,17 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- PHOTO DISPLAY FIX -->
+  <!-- PHOTO DISPLAY + CUTE INTERACTION FIXES -->
   <style>
+
+    /* Keep every photo completely visible */
     .photo-placeholder {
       min-height: 0 !important;
       height: auto !important;
       width: 100%;
       display: block !important;
-      overflow: hidden;
+      overflow: visible !important;
+      background: transparent !important;
     }
 
     .photo-placeholder img {
@@ -34,11 +37,100 @@
       height: auto !important;
       object-fit: contain !important;
       object-position: center;
+      border-radius: 18px;
     }
 
     .photo-card {
       height: auto !important;
+      overflow: visible !important;
+      position: relative;
+      transition:
+        transform 0.45s cubic-bezier(.22,.61,.36,1),
+        filter 0.45s ease,
+        box-shadow 0.45s ease;
+      transform-origin: center center;
+      will-change: transform;
+      -webkit-tap-highlight-color: transparent;
     }
+
+    /* Normal photo cards */
+    .photo-card:not(.active) {
+      transform: translateX(0) scale(1);
+    }
+
+    /* Tapped photo */
+    .photo-card.active {
+      transform: translateX(5%) scale(1.025) !important;
+      z-index: 20;
+      filter: brightness(1.04);
+    }
+
+    /* Alternate cards slide the other direction */
+    .photo-card.offset.active {
+      transform: translateX(-5%) scale(1.025) !important;
+    }
+
+    /* Soft cute glow when tapped */
+    .photo-card.active .photo-placeholder img {
+      box-shadow:
+        0 18px 45px rgba(255, 170, 205, 0.22),
+        0 0 0 1px rgba(255, 190, 215, 0.15);
+    }
+
+    .photo-placeholder img {
+      transition:
+        box-shadow 0.45s ease,
+        filter 0.45s ease;
+    }
+
+    /* Softer photo-card appearance */
+    .photo-card {
+      border-radius: 20px !important;
+    }
+
+    /* Keep captions working normally */
+    .photo-caption {
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Cute little hover/touch feeling */
+    @media (hover: hover) {
+      .photo-card:hover {
+        transform: translateY(-3px) scale(1.01);
+      }
+
+      .photo-card.offset:hover {
+        transform: translateY(-3px) scale(1.01);
+      }
+
+      .photo-card.active:hover {
+        transform: translateX(5%) translateY(-3px) scale(1.025) !important;
+      }
+
+      .photo-card.offset.active:hover {
+        transform: translateX(-5%) translateY(-3px) scale(1.025) !important;
+      }
+    }
+
+    /* Mobile spacing so the sideways movement doesn't feel cramped */
+    @media (max-width: 600px) {
+
+      .photo-grid {
+        overflow: visible !important;
+      }
+
+      .photo-card.active {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .photo-card {
+        touch-action: manipulation;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -56,6 +148,7 @@
 
 
   <main>
+
 
     <!-- HERO -->
     <section class="hero" id="top">
@@ -174,6 +267,7 @@
 
         <div class="photo-grid">
 
+
           <!-- PHOTO 1 -->
           <button
             class="photo-card"
@@ -216,7 +310,7 @@
             <div class="photo-placeholder">
 
               <img
-                src="Screenshot_2026_0828_142004.jpg"
+                src="Screenshot_20260828_142004.jpg"
                 alt="A beautiful memory"
               >
 
