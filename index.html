@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#160d18">
+  <meta name="theme-color" content="#120b13">
+
   <title>For Fatima ♡</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- FLOATING HEARTS -->
   <div class="background-hearts" aria-hidden="true">
     <span>♡</span>
     <span>♡</span>
@@ -24,13 +30,18 @@
     <span>♡</span>
   </div>
 
-  <!-- OPENING -->
+
   <main>
 
+    <!-- ==================== HERO ==================== -->
+
     <section class="hero" id="top">
+
       <div class="hero-inner">
 
-        <div class="tiny-label">A little something for you</div>
+        <div class="tiny-label">
+          A little something for you
+        </div>
 
         <h1>
           Hey,<br>
@@ -38,31 +49,38 @@
         </h1>
 
         <p class="hero-text">
-          I could probably try to explain everything in a thousand messages...
-          but I thought I'd do something a little different instead.
+          I could probably try to explain everything in a thousand
+          messages... but I thought I'd do something a little different
+          instead.
         </p>
 
         <button class="primary-btn" onclick="openLetter()">
-          Open this <span>💌</span>
+          Open this 💌
         </button>
 
         <div class="scroll-hint">
-          <span>there's something I want to say</span>
+          <span>There's something I want to say</span>
           <span class="down-arrow">↓</span>
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- APOLOGY -->
+    <!-- ==================== APOLOGY ==================== -->
+
     <section class="section apology" id="apology">
 
-      <div class="section-number">01</div>
+      <div class="section-number">
+        01
+      </div>
 
       <div class="section-content">
 
-        <p class="eyebrow">First things first</p>
+        <p class="eyebrow">
+          First things first
+        </p>
 
         <h2>
           I'm sorry,<br>
@@ -71,7 +89,9 @@
 
         <div class="apology-card">
 
-          <div class="quote-mark">“</div>
+          <div class="quote-mark">
+            “
+          </div>
 
           <p>
             I know saying "sorry" doesn't magically undo anything.
@@ -99,17 +119,23 @@
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- PHOTO SECTION -->
+    <!-- ==================== MEMORIES ==================== -->
+
     <section class="section memories" id="memories">
 
-      <div class="section-number">02</div>
+      <div class="section-number">
+        02
+      </div>
 
       <div class="section-content">
 
-        <p class="eyebrow">A few little memories</p>
+        <p class="eyebrow">
+          A few little memories
+        </p>
 
         <h2>
           Things that<br>
@@ -120,79 +146,167 @@
           Tap a photo. There's something I want you to know about each one.
         </p>
 
+
         <div class="photo-grid">
 
+
           <!-- PHOTO 1 -->
-          <button class="photo-card" onclick="showCaption(1)">
+
+          <button
+            class="photo-card"
+            onclick="showCaption(1)"
+            type="button"
+          >
+
             <div class="photo-placeholder">
-              <span>Photo 01</span>
-              <small>Your photo goes here</small>
+
+              <span>
+                Photo 01
+              </span>
+
+              <small>
+                Your photo goes here
+              </small>
+
             </div>
 
+
             <div class="photo-caption" id="caption1">
-              <span class="caption-number">01</span>
-              <p>There's something about this moment that I really love.</p>
+
+              <span class="caption-number">
+                01
+              </span>
+
+              <p>
+                There's something about this moment that I really love.
+              </p>
+
             </div>
+
           </button>
+
 
 
           <!-- PHOTO 2 -->
-          <button class="photo-card offset" onclick="showCaption(2)">
+
+          <button
+            class="photo-card offset"
+            onclick="showCaption(2)"
+            type="button"
+          >
+
             <div class="photo-placeholder">
-              <span>Photo 02</span>
-              <small>Your photo goes here</small>
+
+              <span>
+                Photo 02
+              </span>
+
+              <small>
+                Your photo goes here
+              </small>
+
             </div>
 
+
             <div class="photo-caption" id="caption2">
-              <span class="caption-number">02</span>
-              <p>Somehow you manage to make even ordinary moments memorable.</p>
+
+              <span class="caption-number">
+                02
+              </span>
+
+              <p>
+                Somehow you manage to make even ordinary moments memorable.
+              </p>
+
             </div>
+
           </button>
+
 
 
           <!-- PHOTO 3 -->
-          <button class="photo-card" onclick="showCaption(3)">
+
+          <button
+            class="photo-card"
+            onclick="showCaption(3)"
+            type="button"
+          >
+
             <div class="photo-placeholder">
-              <span>Photo 03</span>
-              <small>Your photo goes here</small>
+
+              <span>
+                Photo 03
+              </span>
+
+              <small>
+                Your photo goes here
+              </small>
+
             </div>
 
+
             <div class="photo-caption" id="caption3">
-              <span class="caption-number">03</span>
-              <p>And yes, I'm still going to tell you how pretty you look.</p>
+
+              <span class="caption-number">
+                03
+              </span>
+
+              <p>
+                And yes, I'm still going to tell you how pretty you look.
+              </p>
+
             </div>
+
           </button>
+
 
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- LETTER -->
+    <!-- ==================== LETTER ==================== -->
+
     <section class="section letter-section" id="letter">
 
-      <div class="section-number">03</div>
+      <div class="section-number">
+        03
+      </div>
 
       <div class="section-content">
 
-        <p class="eyebrow">What I actually wanted to say</p>
+        <p class="eyebrow">
+          What I actually wanted to say
+        </p>
 
         <h2>
           You mean<br>
           <em>the world to me.</em>
         </h2>
 
+
         <div class="letter">
 
           <div class="letter-top">
-            <span>For Fatima ♡</span>
-            <span>with love</span>
+
+            <span>
+              For Fatima ♡
+            </span>
+
+            <span>
+              with love
+            </span>
+
           </div>
+
 
           <div class="letter-body">
 
-            <p>Fatima,</p>
+            <p>
+              Fatima,
+            </p>
 
             <p>
               I don't think I say this nearly enough, but you genuinely
@@ -231,9 +345,17 @@
               More than I probably know how to explain properly.
             </p>
 
+
             <div class="letter-signature">
-              <span>Always,</span>
-              <strong>Nomaan ♡</strong>
+
+              <span>
+                Always,
+              </span>
+
+              <strong>
+                Nomaan ♡
+              </strong>
+
             </div>
 
           </div>
@@ -241,17 +363,23 @@
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- PLAYFUL SECTION -->
+    <!-- ==================== PLAYFUL QUESTION ==================== -->
+
     <section class="section little-section" id="little">
 
-      <div class="section-number">04</div>
+      <div class="section-number">
+        04
+      </div>
 
       <div class="section-content center">
 
-        <p class="eyebrow">Okay, enough seriousness</p>
+        <p class="eyebrow">
+          Okay, enough seriousness
+        </p>
 
         <h2>
           One tiny<br>
@@ -262,64 +390,152 @@
           Do you know how important you are to me?
         </p>
 
-        <button class="primary-btn" onclick="answerQuestion()">
+        <button
+          class="primary-btn"
+          onclick="answerQuestion()"
+          type="button"
+        >
           I think so 👀
         </button>
 
-        <div class="hidden-answer" id="answer">
-          <span>Actually...</span>
-          <strong>probably not enough.</strong>
+
+        <div
+          class="hidden-answer"
+          id="answer"
+        >
+
+          <span>
+            Actually...
+          </span>
+
+          <strong>
+            probably not enough.
+          </strong>
+
           <p>
             Because if you did, you'd know just how much space
             you've quietly taken up in my heart.
           </p>
+
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- FINAL -->
+    <!-- ==================== FINAL MESSAGE ==================== -->
+
     <section class="final-section">
 
       <div class="final-glow"></div>
 
+
       <div class="final-content">
 
-        <p class="eyebrow">One last thing</p>
+        <p class="eyebrow">
+          One last thing
+        </p>
+
 
         <h2>
           I hope you<br>
           <em>never forget...</em>
         </h2>
 
-        <button class="final-btn" onclick="revealFinal()">
-          Open one last thing ♡
+
+        <button
+          class="final-btn"
+          onclick="revealFinal()"
+          type="button"
+        >
+          Please read this ♡
         </button>
 
-        <div class="final-message" id="finalMessage">
 
-          <div class="final-heart">♡</div>
+        <div
+          class="final-message"
+          id="finalMessage"
+        >
+
+          <div class="final-heart">
+            ♡
+          </div>
+
 
           <p>
-            No matter how badly I sometimes manage to put things into words,
-            please know this:
+            There's one thing I really want you to understand about me.
           </p>
+
+
+          <p>
+            Sometimes my brain just doesn't work the way you think it should.
+            Sometimes I process things differently, react differently,
+            or fail to express what I'm actually feeling in the way you need me to.
+          </p>
+
+
+          <p>
+            But please don't ever mistake that for me not caring.
+          </p>
+
+
+          <p>
+            Because even when I don't say it properly,
+            <strong>I think about you all the time.</strong>
+          </p>
+
+
+          <p>
+            I respect you. I care about you.
+            And I genuinely try to give you the priority, attention,
+            and effort that I don't give just anyone.
+          </p>
+
+
+          <p>
+            If I've ever been rude to you, made you feel ignored,
+            unimportant, unwanted, or somehow worthless,
+            I'm genuinely sorry.
+          </p>
+
+
+          <p>
+            You never deserved to feel that way,
+            especially not because of me.
+          </p>
+
 
           <h3>
-            You mean the world to me, Fatima.
+            You are far more precious to me than you probably realize.
           </h3>
 
+
           <p>
-            I'm sorry for the times I failed to show it properly.
-            And I'm grateful for every little moment that has given me
-            another reason to care about you.
+            I'm sorry for the times my actions didn't show what my heart
+            actually feels. I hope you can forgive me for those moments.
           </p>
 
+
+          <p>
+            Because no matter how badly my brain sometimes manages
+            to communicate it...
+            <strong>you mean the world to me.</strong>
+          </p>
+
+
           <div class="final-name">
-            <span>With all my heart,</span>
-            <strong>Nomaan</strong>
+
+            <span>
+              I'm sorry, Fatima.
+            </span>
+
+            <strong>
+              Nomaan ♡
+            </strong>
+
           </div>
+
 
         </div>
 
@@ -330,8 +546,14 @@
   </main>
 
 
+  <!-- ==================== FOOTER ==================== -->
+
   <footer>
-    <span>Made with a lot of thought ♡</span>
+
+    <span>
+      Made with a lot of thought ♡
+    </span>
+
   </footer>
 
 
