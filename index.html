@@ -16,6 +16,30 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- PHOTO DISPLAY FIX -->
+  <style>
+    .photo-placeholder {
+      min-height: 0 !important;
+      height: auto !important;
+      width: 100%;
+      display: block !important;
+      overflow: hidden;
+    }
+
+    .photo-placeholder img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto !important;
+      object-fit: contain !important;
+      object-position: center;
+    }
+
+    .photo-card {
+      height: auto !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -53,7 +77,11 @@
           instead.
         </p>
 
-        <button class="primary-btn" onclick="openLetter()" type="button">
+        <button
+          class="primary-btn"
+          onclick="openLetter()"
+          type="button"
+        >
           Open this 💌
         </button>
 
@@ -154,10 +182,12 @@
           >
 
             <div class="photo-placeholder">
+
               <img
                 src="IMG_20260828_142437.jpg"
                 alt="A special memory"
               >
+
             </div>
 
             <div class="photo-caption" id="caption1">
@@ -184,10 +214,12 @@
           >
 
             <div class="photo-placeholder">
+
               <img
                 src="Screenshot_2026_0828_142004.jpg"
                 alt="A beautiful memory"
               >
+
             </div>
 
             <div class="photo-caption" id="caption2">
@@ -214,10 +246,12 @@
           >
 
             <div class="photo-placeholder">
+
               <img
                 src="Screenshot_2026_0828_142402.jpg"
                 alt="A little moment I remember"
               >
+
             </div>
 
             <div class="photo-caption" id="caption3">
@@ -244,10 +278,12 @@
           >
 
             <div class="photo-placeholder">
+
               <img
                 src="Screenshot_2026_0828_142419.jpg"
                 alt="A beautiful little memory"
               >
+
             </div>
 
             <div class="photo-caption" id="caption4">
