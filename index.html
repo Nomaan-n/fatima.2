@@ -4,691 +4,177 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#120b13">
-
-  <title>For Fatima ♡</title>
-
+  <title>For Pearl ♡</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- PHOTO DISPLAY + CUTE INTERACTION FIXES -->
-  <style>
-
-    /* Keep every photo completely visible */
-    .photo-placeholder {
-      min-height: 0 !important;
-      height: auto !important;
-      width: 100%;
-      display: block !important;
-      overflow: visible !important;
-      background: transparent !important;
-    }
-
-    .photo-placeholder img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto !important;
-      object-fit: contain !important;
-      object-position: center;
-      border-radius: 18px;
-    }
-
-    .photo-card {
-      height: auto !important;
-      overflow: visible !important;
-      position: relative;
-      transition:
-        transform 0.45s cubic-bezier(.22,.61,.36,1),
-        filter 0.45s ease,
-        box-shadow 0.45s ease;
-      transform-origin: center center;
-      will-change: transform;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    /* Normal photo cards */
-    .photo-card:not(.active) {
-      transform: translateX(0) scale(1);
-    }
-
-    /* Tapped photo */
-    .photo-card.active {
-      transform: translateX(5%) scale(1.025) !important;
-      z-index: 20;
-      filter: brightness(1.04);
-    }
-
-    /* Alternate cards slide the other direction */
-    .photo-card.offset.active {
-      transform: translateX(-5%) scale(1.025) !important;
-    }
-
-    /* Soft cute glow when tapped */
-    .photo-card.active .photo-placeholder img {
-      box-shadow:
-        0 18px 45px rgba(255, 170, 205, 0.22),
-        0 0 0 1px rgba(255, 190, 215, 0.15);
-    }
-
-    .photo-placeholder img {
-      transition:
-        box-shadow 0.45s ease,
-        filter 0.45s ease;
-    }
-
-    /* Softer photo-card appearance */
-    .photo-card {
-      border-radius: 20px !important;
-    }
-
-    /* Keep captions working normally */
-    .photo-caption {
-      position: relative;
-      z-index: 5;
-    }
-
-    /* Cute little hover/touch feeling */
-    @media (hover: hover) {
-      .photo-card:hover {
-        transform: translateY(-3px) scale(1.01);
-      }
-
-      .photo-card.offset:hover {
-        transform: translateY(-3px) scale(1.01);
-      }
-
-      .photo-card.active:hover {
-        transform: translateX(5%) translateY(-3px) scale(1.025) !important;
-      }
-
-      .photo-card.offset.active:hover {
-        transform: translateX(-5%) translateY(-3px) scale(1.025) !important;
-      }
-    }
-
-    /* Mobile spacing so the sideways movement doesn't feel cramped */
-    @media (max-width: 600px) {
-
-      .photo-grid {
-        overflow: visible !important;
-      }
-
-      .photo-card.active {
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
-
-      .photo-card {
-        touch-action: manipulation;
-      }
-
-    }
-
-  </style>
 </head>
-
 <body>
-
-  <!-- FLOATING HEARTS -->
   <div class="background-hearts" aria-hidden="true">
-    <span>♡</span>
-    <span>♡</span>
-    <span>♡</span>
-    <span>♡</span>
-    <span>♡</span>
-    <span>♡</span>
+    <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
   </div>
 
-
   <main>
-
-
-    <!-- HERO -->
     <section class="hero" id="top">
-
       <div class="hero-inner">
-
-        <div class="tiny-label">
-          A little something for you
-        </div>
-
-        <h1>
-          Hey,<br>
-          <span>Fatima.</span>
-        </h1>
-
+        <div class="tiny-label">A little something for you</div>
+        <h1>Hey,<br><span>Pearl.</span></h1>
         <p class="hero-text">
-          I could probably try to explain everything in a thousand
-          messages... but I thought I'd do something a little different
-          instead.
+          I could send a hundred messages trying to explain myself, but I wanted to say this
+          properly, without hiding behind excuses.
         </p>
-
-        <button
-          class="primary-btn"
-          onclick="openLetter()"
-          type="button"
-        >
-          Open this 💌
-        </button>
-
+        <button class="primary-btn" onclick="openLetter()" type="button">Open this 💌</button>
         <div class="scroll-hint">
           <span>There's something I want to say</span>
           <span class="down-arrow">↓</span>
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- APOLOGY -->
     <section class="section apology" id="apology">
-
-      <div class="section-number">
-        01
-      </div>
-
+      <div class="section-number">01</div>
       <div class="section-content">
-
-        <p class="eyebrow">
-          First things first
-        </p>
-
-        <h2>
-          I'm sorry,<br>
-          <em>Fatima.</em>
-        </h2>
+        <p class="eyebrow">First things first</p>
+        <h2>I'm sorry,<br><em>Pearl.</em></h2>
 
         <div class="apology-card">
-
-          <div class="quote-mark">
-            “
-          </div>
-
+          <div class="quote-mark">“</div>
           <p>
-            I know saying "sorry" doesn't magically undo anything.
-            And I'm not here to throw a bunch of pretty words at you
-            and pretend that's enough.
+            I know I ruined your mood, and I know I got a little too close and made you
+            uncomfortable. That was my mistake.
           </p>
-
           <p>
-            I genuinely regret the things I've done that hurt you,
-            disappointed you, or made you feel like you mattered less
-            than you actually do to me.
+            I should have noticed the boundary sooner and respected your comfort instead of
+            making the moment awkward for you.
           </p>
-
           <p>
-            You deserved better from me in those moments.
-            I should have been more thoughtful, more understanding,
-            and more careful with someone who means this much to me.
+            I'm not going to make excuses for it or try to make you feel responsible for
+            forgiving me. You were allowed to feel uncomfortable, and I should have handled
+            myself better.
           </p>
-
+          <p>
+            I'm genuinely sorry for putting you in that position. I understand that an apology
+            only means something if my behaviour changes too.
+          </p>
           <p class="signature">
             So, simply...
             <strong>I'm sorry.</strong>
           </p>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- MEMORIES -->
-    <section class="section memories" id="memories">
-
-      <div class="section-number">
-        02
-      </div>
-
-      <div class="section-content">
-
-        <p class="eyebrow">
-          A few little memories
-        </p>
-
-        <h2>
-          Things that<br>
-          <em>make me smile.</em>
-        </h2>
-
-        <p class="section-intro">
-          Tap a photo. There's something I want you to know about each one.
-        </p>
-
-
-        <div class="photo-grid">
-
-
-          <!-- PHOTO 1 -->
-          <button
-            class="photo-card"
-            onclick="showCaption(1)"
-            type="button"
-          >
-
-            <div class="photo-placeholder">
-
-              <img
-                src="IMG_20260828_142437.jpg"
-                alt="A special memory"
-              >
-
-            </div>
-
-            <div class="photo-caption" id="caption1">
-
-              <span class="caption-number">
-                01
-              </span>
-
-              <p>
-                Some pictures are just pictures.
-                This one feels like a little piece of home.
-              </p>
-
-            </div>
-
-          </button>
-
-
-          <!-- PHOTO 2 -->
-          <button
-            class="photo-card offset"
-            onclick="showCaption(2)"
-            type="button"
-          >
-
-            <div class="photo-placeholder">
-
-              <img
-                src="Screenshot_20260828_142004.jpg"
-                alt="A beautiful memory"
-              >
-
-            </div>
-
-            <div class="photo-caption" id="caption2">
-
-              <span class="caption-number">
-                02
-              </span>
-
-              <p>
-                If I could give you one thing,
-                it would be every reason to smile like this.
-              </p>
-
-            </div>
-
-          </button>
-
-
-          <!-- PHOTO 3 -->
-          <button
-            class="photo-card"
-            onclick="showCaption(3)"
-            type="button"
-          >
-
-            <div class="photo-placeholder">
-
-              <img
-                src="Screenshot_2026_0828_142402.jpg"
-                alt="A little moment I remember"
-              >
-
-            </div>
-
-            <div class="photo-caption" id="caption3">
-
-              <span class="caption-number">
-                03
-              </span>
-
-              <p>
-                You probably don't realize how often
-                the smallest things about you stay on my mind.
-              </p>
-
-            </div>
-
-          </button>
-
-
-          <!-- PHOTO 4 -->
-          <button
-            class="photo-card offset"
-            onclick="showCaption(4)"
-            type="button"
-          >
-
-            <div class="photo-placeholder">
-
-              <img
-                src="Screenshot_2026_0828_142419.jpg"
-                alt="A beautiful little memory"
-              >
-
-            </div>
-
-            <div class="photo-caption" id="caption4">
-
-              <span class="caption-number">
-                04
-              </span>
-
-              <p>
-                Even a tiny moment can become something
-                I remember for a very long time.
-              </p>
-
-            </div>
-
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- LETTER -->
     <section class="section letter-section" id="letter">
-
-      <div class="section-number">
-        03
-      </div>
-
+      <div class="section-number">02</div>
       <div class="section-content">
-
-        <p class="eyebrow">
-          What I actually wanted to say
-        </p>
-
-        <h2>
-          You mean<br>
-          <em>the world to me.</em>
-        </h2>
-
+        <p class="eyebrow">What I actually wanted to say</p>
+        <h2>You deserve<br><em>to feel comfortable.</em></h2>
 
         <div class="letter">
-
           <div class="letter-top">
-
-            <span>
-              For Fatima ♡
-            </span>
-
-            <span>
-              with love
-            </span>
-
+            <span>For Pearl ♡</span>
+            <span>with sincerity</span>
           </div>
-
 
           <div class="letter-body">
-
+            <p>Pearl,</p>
             <p>
-              Fatima,
+              I thought about what happened, and the simple truth is that I crossed a line
+              without thinking enough about how it would feel from your side.
             </p>
-
             <p>
-              I don't think I say this nearly enough, but you genuinely
-              mean so much to me.
+              I got a little too close, made you uncomfortable, and ruined your mood. I don't
+              want to dress that up with complicated explanations. I was wrong.
             </p>
-
             <p>
-              You're not just somebody I happen to care about.
-              Your presence has become something that matters to me
-              in a way that's difficult to put into a neat sentence.
+              You shouldn't have to tolerate something that makes you uncomfortable just
+              because I didn't intend for it to happen that way. Your comfort matters, and I
+              should have respected that in the moment.
             </p>
-
             <p>
-              Your laugh, your little habits, the way you talk,
-              the random things you say, even the things you probably
-              don't think twice about...
-              I notice them.
+              I'm not asking you to forget it instantly, and I'm not asking you to forgive me
+              on my timeline. I just wanted you to know that I understand what I did and that
+              I'm sorry.
             </p>
-
             <p>
-              And somewhere along the way, you became one of those
-              people whose happiness genuinely matters to me.
+              I'll be more mindful of your boundaries from here on. That's the part of this
+              apology that actually matters.
             </p>
-
-            <p>
-              That's why I'm sorry when I get things wrong.
-              Not because I want everything to magically be okay,
-              but because <strong>you matter to me.</strong>
-            </p>
-
-            <p>
-              A lot.
-            </p>
-
             <p class="letter-ending">
-              More than I probably know how to explain properly.
+              I'm sorry for making a moment that should have felt comfortable feel otherwise.
             </p>
-
 
             <div class="letter-signature">
-
-              <span>
-                Always,
-              </span>
-
-              <strong>
-                Nomaan ♡
-              </strong>
-
+              <span>Take care,</span>
+              <strong>Nomaan ♡</strong>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- PLAYFUL QUESTION -->
     <section class="section little-section" id="little">
-
-      <div class="section-number">
-        04
-      </div>
-
+      <div class="section-number">03</div>
       <div class="section-content center">
-
-        <p class="eyebrow">
-          Okay, enough seriousness
-        </p>
-
-        <h2>
-          One tiny<br>
-          <em>question.</em>
-        </h2>
-
+        <p class="eyebrow">No pressure</p>
+        <h2>One tiny<br><em>promise.</em></h2>
         <p class="question">
-          Do you know how important you are to me?
+          I'll respect your space, your boundaries, and whatever you need.
         </p>
+        <button class="primary-btn" onclick="answerQuestion()" type="button">Read this ♡</button>
 
-        <button
-          class="primary-btn"
-          onclick="answerQuestion()"
-          type="button"
-        >
-          I think so 👀
-        </button>
-
-
-        <div
-          class="hidden-answer"
-          id="answer"
-        >
-
-          <span>
-            Actually...
-          </span>
-
-          <strong>
-            probably not enough.
-          </strong>
-
+        <div class="hidden-answer" id="answer">
+          <span>That's it.</span>
+          <strong>No excuses. No pressure.</strong>
           <p>
-            Because if you did, you'd know just how much space
-            you've quietly taken up in my heart.
+            You don't owe me an immediate response or forgiveness. I just wanted to take
+            responsibility for what I did and make it clear that I understood why it was wrong.
           </p>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- FINAL MESSAGE -->
     <section class="final-section">
-
-      <div class="final-glow"></div>
-
-
       <div class="final-content">
+        <p class="eyebrow">One last thing</p>
+        <h2>I hope you<br><em>know this...</em></h2>
 
-        <p class="eyebrow">
-          One last thing
-        </p>
+        <button class="final-btn" onclick="revealFinal()" type="button">Please read this ♡</button>
 
-
-        <h2>
-          I hope you<br>
-          <em>never forget...</em>
-        </h2>
-
-
-        <button
-          class="final-btn"
-          onclick="revealFinal()"
-          type="button"
-        >
-          Please read this ♡
-        </button>
-
-
-        <div
-          class="final-message"
-          id="finalMessage"
-        >
-
-          <div class="final-heart">
-            ♡
-          </div>
-
-
+        <div class="final-message" id="finalMessage">
+          <div class="final-heart">♡</div>
+          <p>I don't want this apology to be about making myself feel better.</p>
           <p>
-            There's one thing I really want you to understand about me.
+            I want it to be about acknowledging that I affected your mood and made you
+            uncomfortable. I should have been more aware, and I should have respected your
+            personal space.
           </p>
-
-
           <p>
-            Sometimes my brain just doesn't work the way you think it should.
-            Sometimes I process things differently, react differently,
-            or fail to express what I'm actually feeling in the way you need me to.
+            I'm sorry. I mean that without a condition attached to it.
           </p>
-
-
           <p>
-            But please don't ever mistake that for me not caring.
+            If you need distance, I'll respect it. If you need time, I'll respect that too.
+            You don't have to make me feel better about what happened.
           </p>
-
-
+          <h3>Your comfort matters.</h3>
           <p>
-            Because even when I don't say it properly,
-            <strong>I think about you all the time.</strong>
+            I'll make sure my actions show that I understand this, rather than expecting a
+            pretty apology to do all the work.
           </p>
-
-
-          <p>
-            I respect you. I care about you.
-            And I genuinely try to give you the priority, attention,
-            and effort that I don't give just anyone.
-          </p>
-
-
-          <p>
-            If I've ever been rude to you, made you feel ignored,
-            unimportant, unwanted, or somehow worthless,
-            I'm genuinely sorry.
-          </p>
-
-
-          <p>
-            You never deserved to feel that way,
-            especially not because of me.
-          </p>
-
-
-          <h3>
-            You are far more precious to me than you probably realize.
-          </h3>
-
-
-          <p>
-            I'm sorry for the times my actions didn't show what my heart
-            actually feels. I hope you can forgive me for those moments.
-          </p>
-
-
-          <p>
-            Because no matter how badly my brain sometimes manages
-            to communicate it...
-            <strong>you mean the world to me.</strong>
-          </p>
-
-
           <div class="final-name">
-
-            <span>
-              I'm sorry, Fatima.
-            </span>
-
-            <strong>
-              Nomaan ♡
-            </strong>
-
+            <span>I'm sorry, Pearl.</span>
+            <strong>Nomaan ♡</strong>
           </div>
-
-
         </div>
-
       </div>
-
     </section>
-
   </main>
 
-
-  <!-- FOOTER -->
   <footer>
-
-    <span>
-      Made with a lot of thought ♡
-    </span>
-
+    <span>Made with sincerity ♡</span>
   </footer>
 
-
   <script src="script.js"></script>
-
 </body>
 </html>
